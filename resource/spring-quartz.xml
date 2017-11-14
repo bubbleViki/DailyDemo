@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    
+<!-- 招投标信息 -->
+    <bean name="ztbxx" class="org.springframework.scheduling.quartz.JobDetailBean" parent="basejob">
+       <property name="jobClass" value="com.meritit.cidp.etl.job.ZtjJob"></property>
+       <property name="group" value="basegroup"></property>
+       <property name="jobDataAsMap">
+			<map>
+				<entry key="dataService">
+					<ref bean="dataService" />
+				</entry>
+				<entry key="jdbcTemplate">
+					<ref bean="jdbcTemplate" />
+				</entry>
+				<entry key="sendRecordService">
+				    <ref bean="data.sendRecordService"></ref>
+				</entry>
+				
+			</map>
+		</property>
+   </bean>
+    
+    
+    <bean name="zhongbxx" class="org.springframework.scheduling.quartz.JobDetailBean" parent="basejob">
+       <property name="jobClass" value="com.meritit.cidp.etl.job.ZhongBJob"></property>
+       <property name="group" value="basegroup"></property>
+       <property name="jobDataAsMap">
+			<map>
+				<entry key="dataService">
+					<ref bean="dataService" />
+				</entry>
+				<entry key="jdbcTemplate">
+					<ref bean="jdbcTemplate" />
+				</entry>
+				<entry key="compareDataService">
+				    <ref bean="data.compareDataService"></ref>
+				</entry>
+				
+			</map>
+		</property>
+   </bean>
+
+<!-- 国家数据信息 -->
+    <bean name="dsGovJob" class="org.springframework.scheduling.quartz.JobDetailBean" parent="basejob">
+       <property name="jobClass" value="com.meritit.cidp.etl.job.dsGovJob"></property>
+       <property name="group" value="basegroup"></property>
+       <property name="jobDataAsMap">
+			<map>
+				<entry key="dataService">
+					<ref bean="dataService" />
+				</entry>
+				<entry key="jdbcTemplate">
+					<ref bean="jdbcTemplate" />
+				</entry>
+				<entry key="sendRecordService">
+				    <ref bean="data.sendRecordService"></ref>
+				</entry>
+				
+			</map>
+		</property>
+   </bean>
+    
+    
+
+</beans>

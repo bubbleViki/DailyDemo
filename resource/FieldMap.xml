@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MAPS>
+	<!-- ID为任务id -->
+	<MAP ID="1484209534648">
+		<!-- 标签名为对应字段  标签内容为对应成员变量 DATA属性为字段对应关系  -->
+		<ZBLX DATA="工程招标;工程类$$货物招标;货物类$$服务招标;服务类">projectType</ZBLX>
+		<ZBR>tenderPerson</ZBR>
+		<ZBQY>company</ZBQY>
+		<ZBJD DATA="招标预告;正在评估$$招标公告;正在招标,正在开标,正在评标,招标公告$$中标结果;招标结束,评标结束">projectState</ZBJD>
+		<ZBDL>agency</ZBDL>
+		<ZBBT>title</ZBBT>
+		<FBRQ>createtime</FBRQ>
+		<JBSJ>deadtime</JBSJ>
+	</MAP>
+	
+	<MAP ID="1486451149781">
+		<ZBLX></ZBLX>
+		<ZBR></ZBR>
+		<ZBQY MARK="company" DATA="所属地区">content</ZBQY>
+		<ZBJD>projectState</ZBJD>
+		<!-- MARK属性为对应属性  SPLIT为切分属性的分隔符 -->
+		<ZBDL MARK="agency" SPLIT="&amp;" DATA="招标代理&amp;招标机构">content</ZBDL>
+		<ZBBT>title</ZBBT>
+		<FBRQ>pubdate</FBRQ>
+		<JBSJ MARK="deadtime" DATA="招标截止">content</JBSJ>
+	</MAP>
+	<MAP ID="1486446072404">
+		<ZBLX></ZBLX>
+		<ZBR></ZBR>
+		<ZBQY MARK="company" DATA="所属地区">content</ZBQY>
+		<ZBJD>projectState</ZBJD>
+		<ZBDL MARK="agency" SPLIT="&amp;" DATA="招标代理&amp;招标机构">content</ZBDL>
+		<ZBBT>title</ZBBT>
+		<FBRQ>pubdate</FBRQ>
+		<JBSJ MARK="deadtime" DATA="招标截止">content</JBSJ>
+	</MAP>
+	
+		<!-- ID为任务id -->
+	<MAP ID="1484209534648">
+		<!-- 标签名为对应字段  标签内容为对应成员变量 DATA属性为字段对应关系  -->
+		<ZBLX DATA="工程招标;工程类$$货物招标;货物类$$服务招标;服务类">projectType</ZBLX>
+		<ZBR>tenderPerson</ZBR>
+		<ZBQY>company</ZBQY>
+		<ZBJD DATA="招标预告;正在评估$$招标公告;正在招标,正在开标,正在评标,招标公告$$中标结果;招标结束,评标结束">projectState</ZBJD>
+		<ZBDL>agency</ZBDL>
+		<ZBBT>title</ZBBT>
+		<FBRQ>createtime</FBRQ>
+		<JBSJ>deadtime</JBSJ>
+	</MAP>
+</MAPS>
